@@ -1,0 +1,270 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Requirements page</title>
+	<link rel="stylesheet" href="../coursework2/css_and_js/reqStyle.css">
+</head>
+<body>
+
+<h1>CMP204 Requirements Page - Unit 2 Assessment</h1>
+
+<p>If you have not met a requirement, do not delete it from the table.</p>
+
+<table>
+  <tr>
+    <th class="reqCol">Requirement</th>
+    <th class="metCol">How did you meet this requirement?</th>
+    <th class="fileCol">File name(s), line no.</th>
+  </tr>
+  <tr>
+    <td>A clear use of HTML5</td>
+    <td>Yes, I have altered the layout/appearance of my website to look sleeker, choosing to go with a black, white, gold and light blue colour scheme for the website. I've used HTML 5 effectively throughout the website. For example, I have used section tags to mark areas on the website and as well commenting in my code for someone to read and understand how it works.
+
+    </td>
+    <td>This demonstrated throughout the website.</td>
+  </tr>
+  <tr>
+    <td>Use of the Bootstrap framework providing a responsive layout </td>
+    <td>Yes, I have used Bootstrap effectively to allow a responsive layout, I decided to adapt the gallery type effect that I used previously in my about us page for my albums page. I implemented a carousel, showing multiple albums that cycle between three different slides. Furthermore, I used Bootstrap's flip card class, to have that when a user hovers their mouse over an album, it displays details of the album.
+      Which include the name, album release, album-length and, how many songs are in the album with a button to redirect the user to that albums page. 
+
+      <b>The code for the showcase carousel and flip card effect can be found in the albums.php page in the main-pages folder. </b>
+  </td>
+    <td>albums.php lines: 38 - 329 (it's in a section tag to make it easier to find)</td>
+  </tr>
+  <tr>
+    <td>Use of AJAX (pure JavaScript i.e. without the use of a library)</td>
+    <td>Yes, I have used pure AJAX to display an image (a picture of my GDPR policy) that uses the GET method to fetch the image from my photos directory and adds the image source of GDPR picture to a  tag id called 'img-GDPR'. This executes in the privacy-policy.php after the button called GDPR Policy by way of using the onload function in the button tag. 
+      Furthermore, I use pure ajax to retrieve two text files called GDPR_des and cookie_des. To retrieve the files I pass in two parameters. One is for the id I want to place the contents the other is the directory of where the text files are. I use GET in AJAX to get the files and then add the contents to the INNERHTML id.
+      <br>
+      <br>
+      Finally, I use AJAX to transfer an image into my uploads.php file, which leads to uploading an image onto the server. The reason I've done this is to create a profile picture. The Ajax function I created takes care of the file handling, such as checking it's a PNG image type and that the image is less 5MB. The uploads.php uploads the file via an SFTP protocol like Filezilla. I researched on how to use cURL in PHP for file transfer as I had little knowledge and it wasn't really needed to be taught and it was the only solution for file upload at the time and I'll reference my sources and in the uploads.php. After adapting the uploads function, the image is automatically renamed to profile(the users id).png. Then I use an UPDATE statement to rename the image field on my profileimg table in my database to profile*id*.png.
+      
+      Then AJAX looks for the image in the profile_images folder in the photos directory and if has found it, it then changes the 'profile_pic' id src to link towards the image. However, the user needs to refresh their browser as I believe the browser needs to know that the image has been replaced with the same name and directory
+      <br>
+      <br>
+      <b>To note: most methods on cURL are very similar to each other, but I did adapt the function to connect and successfully transfer an image. For example, one error was that the file name was the temp location of the image, this had posed a risk as an attacker, could tamper with the temp location, I fixed this by automatically renaming the file to profile*id*.png. If this was an FTP, I think file transfers would be much more suitable.
+      References for cURL <a href="https://www.glenscott.co.uk/uploading-file-sftp-server-php-curl/">Reference 1</a> <a href="https://www.php.net/manual/en/function.curl-setopt.php">Reference 2</a></b>
+    </td>
+    <td>
+      <ol>
+        <li>GET and Displaying the GDPR Picture - assignment.js lines:43 - 61</li>
+        <br>
+        <li>GET and Displaying the contents of txt files - assignment.js lines:189 - 212,</li>
+        <br>
+        <li>File Upload Handling - assignment.js lines: 66 - 146</li>
+        <br>
+      </ol></td>
+  </tr>
+  <tr>
+    <td>Use of the jQuery AJAX function</td>
+    <td>Yes, I have used jQuery Ajax to display and load comments on any album page by collecting the form data, i.e. the text in the comment box and a hidden input with a value - the value being the page name - from the form.
+      We use the POST method to send that data to my post-comments.php and load-comments.php respectfully via jQuery AJAX. 
+      
+      <br>
+      The jQuery Ajax code is triggered when the user has clicked the submit button. The button is checked by looking at the form tag's id that the submit button has been clicked.
+      
+      The comments load by attaching the data we got from the load-comments.php  to a div  that has an id 'display_comment', this is how we do validation check as well, by displaying a message to a 'span' tag with an id of 'comment_message' 
+    </td>
+    <td>
+      <ol>
+        <li>load and posting comments - assignment.js lines:3 - 51</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td>User login functionality (PHP/MySQL)</td>
+    <td>Yes, I have implemented a signup and login system. The signup form takes the user's name, username, email, password and a repeated password. Then this data is passed into my signup.inc.php file and executes PHP functions that are in the functions.inc.php. This file contains a list of functions used throughout the application.
+
+      <br>
+      <br>
+      The functions include checking that the forms are not empty, character length for username and password, verifying the email, verifying a username or email doesn't already exist and finally creating the user and hashing their password. We then give them an id on our database with the use of auto-increment, which acts as a primary key.
+      <br>
+      <br>
+      The login form can take either the user's email or username and password for them to log in and the password is going to be used to compare one on the databases. We use the same functions for validation of data as mentioned above in the signup explanation. rd for them to login and the password is then check to match the same hash as the one in our database.  </td>
+    <td>
+      <ol>
+        <li>signup form - signup.php lines:46 - 95</li>
+        <br>
+        <li>login form - login.php lines: 38 - 71</li>
+        <br>
+        <li>signup process - signup.inc.php lines: 5 - 44 </li>
+        <br>
+        <li>Functions used in Signup process - functions.inc.php lines:5 - 174 </li>
+        <br>
+        <li>login process used in login process - login.inc.php.inc.php lines:3 - 20 </li>
+        <br>
+        <li>Functions used in login process - functions.inc.php lines:192 - 234 </li>
+        <br>
+      </ol>
+      </td>
+  </tr>
+  <tr>
+    <td>Ability to select, add, edit and delete information from a database (PHP/MySQL)</td>
+    <td>Yes, I have implemented all 4 of these SQL statement types in my web application:
+        <ol>
+          <li>SELECT: Yes, I have used Select statements in the logging process after the data has checked. The SELECT statement for the login system selects the row where the username or email matches the one that user had given in the form this is to be checked and verify that the password and username/email is valid and associated with that user in the database. The password is validated by retrieving the hash value from our database and then using password_verify we pass in our hashed password and the password the user entered as the parameters.
+            <br>
+            <br>
+
+            A SELECT statement is used in the signup form to check that the username/email that was sent in POST is not already in the database, if so then the user will have to pick a different email or username or both.
+                        
+            Finally, I've used a SELECT statement to select specific comments on album pages that relate to that album. For example, you'll only see comments that are specific to that album. The process is worked alongside Ajax to display it.            
+          </li>
+          <br>
+          <li>EDIT: Yes, I have implemented an Ability for the user to change information for themselves. In my profile.php, lists different forms that can be accessed from a click of a button, that allow them to change their username, email, name, or password. These actions are echoed via the profile_actions.php due to not wanting to fill the profile.php file with long lengths of echos I decide to place them in that file.
+
+            The profile_actions.php echoes the forms and the action for those forms directs the user to the profile_functions.php, which handles all the database information and error handling and uses the functions.inc.php file to validate data and execute the SQL statements.
+            
+          </li>
+          <br>
+
+          <li>ADD: Yes, I have implemented an ADD ability, when a user first signs up, not only is a row created in the user's table on my database, a row is also created in my profile img table. The row is created in the functions.inc.php and is done in a prepared SQL statement like all the SQL statements so far. 
+            <br>
+            <br>
+            We INSERT the user's id number and the image name, by default the image name is default_image.jpg. When the user decides to upload a new image in the profile.php, the image name is updated. 
+            <br>
+            <br>
+             Another ADD ability the form of posting comments, how it works is on any albums page in the album-pages folder, includes a form that has a blank textbox and a submit button. After the user has entered some text and clicked the button, I used Jquery Ajax to POST the information to my post-comments.php file, which handles the inserting (adding) of new data to my comments table in my database. The INSERT statement inserts data into the author, message, and album_name fields in the table. We do check that the input is not empty. 
+            <br>
+            <br>
+
+            The author's name is obtained from the session variable called name. The album name is obtained from a value in an input that is hidden on the form. The value assigned to it is the page name. After the SQL statement has been executed a message is displayed showing that a comment has been added.
+            
+          </li>
+          <br>
+
+          <li>DELETE: Yes, I have implemented an ability for the user to delete their account. In the profile.php file, if the user clicks the 'delete account' button, they are asked to enter their password to confirm the account deletion. When the password has been entered, the password is then sent via POST to the profile_functions.php file, where an IF statement checks that the account delete button was clicked. Then we collect the username and email from the user's session. But first, we check that the password input field was not empty and then execute a 'DeleteUser' function, where we pass in the connection, username, email, password.
+            <br>
+            <br>
+            In the function, we declare a variable called uidExists and assign the return value from a function called uidExist. We are doing this to get the row that the user is on and to obtain the hash password and the id from the user's table. Once that the hash password has been obtained, we then use the password_verify in PHP to compare the hash of the password on our table and the password the user entered.
+            <br>
+            <br>
+
+            If everything has been successful, the prepared DELETE statement executes and finds the user based on their id (primary key in our users table) and delete the information from our users table. We then also delete the user from our comments table and profile image table in our database, and since their row is created at the same time as their row in the users table, we can use the same id. Then the session is destroyed and the user is redirected to the index page.
+            
+          </li>
+        </ol>
+    </td>
+    <td>
+      <ol>
+          <li>SELECT: (Checking Existing Usernames/login) functions.inc.php lines: 81 - 108</li>
+          <br>
+          <li>SELECT: (Loading Comments) load-comments.php lines:6-59 </li>
+          <br>
+          <li>EDIT: (profile action echo) profile_actions.php lines:3-78</li>
+          <br>
+          <li>EDIT: (Calling to the function) profile_functions.php lines: 8-92, functions.inc.php lines:299 - 469 </li>
+          <br>
+          <li>ADD: (Adding the user to the profile image database) functions.inc.php lines:132 - 174 </li>
+          <br>
+          <li>ADD: (Posting Comments) post-comments.php lines:5-42</li>
+          <br>
+          <li>DELETE: (Calling to the function) profile_functions lines:25-41 functions.inc.php: lines 237-296 </li>
+
+      </ol>
+
+    </td>
+  </tr>
+  <tr> 
+    <td>Appropriate consideration of relevant laws</td>
+    <td>Yes, I have considered both the cookie law and GDPR. For the Cookie law, I decided to use a cookie plugin found <a href="https://www.jqueryscript.net/other/GDPR-Cookie-Consent-Popup-Plugin.html">HERE</a> to display a cookie pop on every page so that the user is always aware of the data that can be collected if they accept the cookies. The plugin allows me to display more information on what different cookies a user can agree too. There's also a hyperlink to the privacy policy page. 
+      <br>
+      <br>
+      The privacy policy page displays two tab links. One is for the cookie law & the other is for GDPR. The implementation of the tab links was done to separate both laws for the user to easily read both and understand them.
+      <br>
+      <br>
+       For GDPR, I have written a GDPR policy of how data is handled on the website and mentioned what/how data is stored and how data can be deleted by the user at any time and who to contact in regards to who handles the data, which is my university email. I have also written a cookie policy as well.
+      <br>
+      <br>
+      Furthermore, I created a picture that gives a more friendly view of the GDPR policy, for the user to better read it and understand it more and to not make them feel overwhelmed. This can be done, when the user clicks on 'GDPR Policy' button, which triggers a pure ajax function to fetch the image from the photos directory. I created two text files called cookie_des and GDPR_des which I use Ajax to fetch those text files and use window.onload to execute those the ajax functions on the window load and have all the footers on every page contain a link to the privacy-policy page   
+    </td>
+    <td>
+      <ol>
+        <li>Privacy Policy.php</li>
+        <br>
+        <li>Cookie Plugin: (Calling the plugin) assignment.js lines:152 - 185 & cookie_plugin folder(JavaScript files created by the author)  </li>
+        <br>
+        <li>The script is linked at the bottom of navbar_index.php and navbar_main_pages.php so that the popup can appear on every page. </li>
+        <br>
+        <li>(Displaying the GDPR & Cookie Text files) - assignment.js line:189-212 </li>
+        <br>
+      </ol>
+
+    </td>
+  </tr>
+  <tr>
+    <td>SQL queries should be written as prepared statements</td>
+    <td>Yes, all SQL queries made on the website are written as prepared statements and can be seen in the following files: post-comments.php, load-comments.php and, functions.inc.php</td>
+    <td>
+      <ol>
+        <li>Prepared SQL statements can be seen in the following include files: functions.inc.php, post-comments.php, load-comments.php, uploads.php</li>
+        <br>
+        <li>Just for an example: functions.inc.php lines:114 - 129 </li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td>Passwords should be salted and hashed</td>
+    <td>Yes, passwords are salted and hashed during the signup process. If the user decides to change their password, the new password is salted and hashed as well. The salting and hashing process happens in the functions.inc.php</td>
+    <td>
+      <ol>
+        <li>(Password Hashing) functions.inc.php lines:123</li>
+        <br>
+        <li>(Password verifying) functions.inc.php lines:217</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td>Validation of user input</td>
+    <td>Yes, throughout the website, there are many different validations of user input:
+      <ol>
+        <li>(Validation for signup process) In the signup.inc.php and functions.inc.php files, there are functions which valid the user's input on how many characters their username can be and validating that their username contains, a-z, A-Z and 0-9. This is achieved by the use of IF statements when comparing data.
+          <br>
+          <br>
+          For password validation, I have an IF statement to compare the password and the repeated password to make sure they're the same. I decided to set a minimum character limit. If the password entered is less than 4 characters then it is rejected. Emails I used an IF statement and the FILTER_VALIDATE_EMAIL to validate the email.
+          <br>
+          <br>
+          If any errors were to occur during the signup process, then the user is sent to the signup page. However, I add in a comment at the end of the URL of what the error was. In the signup.php a message is displayed depending on the error in the URL. Obtaining the comment is done by using GET.          
+        </li>
+        <br>
+        <li>(Validation for login process) In the login.php, I use a function called emptyInputLogin that checks if the username/email and password inputs are empty and send the user back to the login page if there has been an error.
+          <br>
+          <br>
+          When comparing the username or email that has been entered, I created a uidExist function which I pass in the username and email and returns the row associated with that username or email since the user can log in with their email as well as their username. This was done also so that I can use the password_verify() function in PHP to compare the password from the form and the one in our database. As mentioned previously, I still use the error in the URL to display an error message to the user.
+        </li>
+        <br>
+        <li>(Validating the Commenting process on albums) I use an AJAX jQuery and my post-comments.php to validate user-input and alerting the user that they require a comment before submitting.
+          <br>
+          I use a function called empty in an IF statement to check if the comment box is not empty. If it is, I assign a string to a variable called error which contains a label tag with the message 'comment require'.
+          Then it is encoded and sent back to the Ajax jQuery function we used, and if the error variable contains a message, it displays the message to the user without updating the webpage.
+          
+        </li>
+        <br>
+
+        <li>(Validation for unauthorised accessing of PHP files in the includes) I have used an IF statement that looks like this (isset($_POST["submit"])) to validate that the user has clicked the submit button and allowing the code in those PHP files to be executed, If the user just typed the URL and did not press the button, they are redirected to the homepage 
+        </li>
+      </ol>
+
+    </td>
+    <td>
+      <ol>
+        <li>(Validation for signup process) - signup.inc.php lines:5-44, functions.inc.php lines:5-78  </li>
+        <br>
+        <li>(Validation for login process) - login.inc.php lines:3-20, functions.inc.php lines:192 - 234</li>
+        <br>
+        <li>(Validating the Commenting process on albums) - post-comments.php lines:9-38, functions.inc.php lines:177-188</li>
+        <br>
+        <li>(Validation for unauthorised accessing of PHP files in the includes) login.inc.php lines: 3-20 
+      </ol>
+    </td>
+  </tr>
+</table>
+		
+</body>
+</html>
+
+
+
