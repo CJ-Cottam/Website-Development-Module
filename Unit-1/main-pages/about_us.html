@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Queen | About us</title>
+   <!--Meta Tags-->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!--My CSS-->
+   <link href="../css_and_js/my_css_and_js/custom.css" rel="stylesheet" type="text/css">
+   <!--Bootstrap-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <!--Jquery first, Popper.js, Bootstrap JS-->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   <!--Google Fonts-->
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Favicon image source = https://logos-world.net/queen-logo-history/ -->
+    <link rel="icon" type="image/ico" href="../photos/queen_photos/queen_favicon.ico"/>
+    <!--My JavaScript-->
+    <script type="text/javascript" src="../css_and_js/my_css_and_js/assignment.js"></script>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <section id="nav-bar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Brand/logo -->
+                <a id="navbar-brand" href="index.html">
+                    <!--Favicon image source = https://logos-world.net/queen-logo-history/ -->
+                </a>
+                <!-- Links -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-lable="Toggle navigation"> 
+                <i class="fa fa-bars"></i></button>
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about_us.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="albums.html">Albums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="merch.html">Merchandise</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section id="About-me-Page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1> About us</h1>
+                    <!--Nav-tabs-->
+                    <ul class="nav nav-tabs left-tabs">
+                        <!--First slide is Queen, Freddie, Brian, Roger, John-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#queen-left" data-toggle="tab">Queen</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#freddie-left" data-toggle="tab">Freddie</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#brian-left" data-toggle="tab">Brian</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#roger-left" data-toggle="tab">Roger</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#john-left" data-toggle="tab">John</a>
+                          </li>
+                    </ul>
+                    
+                    <!--Content inside the tabs-->
+                    <div class="tab-content">
+                        <article id="queen-left" class="tab-pane container active">
+                            <h1>Queen</h1>
+                            <section>
+                                Queen are a British rock band formed in London in 1970. 
+                                Their classic line-up was 
+                                Freddie Mercury (lead vocals, piano), Brian May (guitar, vocals), Roger Taylor (drums, vocals) and John Deacon (bass).
+                                Before forming Queen, May and Taylor had played together in the band Smile. 
+                                Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques.
+                                He joined in 1970 and suggested the name "Queen". 
+                                Deacon was recruited in February 1971, before the band released their eponymous debut album in 1973.
+                                Their performance at the 1985 Live Aid concert is ranked among the greatest in rock history by various publications. 
+                                In August 1986, Mercury gave his last performance with Queen at Knebworth, England. 
+                                In 1991, he died of bronchopneumonia – a complication of AIDS – and Deacon retired in 1997. 
+                                Since 2004, May and Taylor have toured under the "Queen +" name with vocalists Paul Rodgers and Adam Lambert.
+                            </section>
+                        </article>
+                        <!--Article on Freddie Mercury-->
+                        <article id="freddie-left" class="tab-pane container">
+                            <h1>Freddie Mercury</h1>
+                            <section>
+                                Freddie Mercury (born 5 September 1946 – 24 November 1991) was a British singer, songwriter, record producer, and lead vocalist of the rock band Queen.
+                                <span id="dots">...</span><span id="more"> Regarded as one of the greatest singers in the history of rock music, 
+                                he was known for his flamboyant stage persona and four-octave vocal range. 
+                                Mercury defied the conventions of a rock frontman, with his highly theatrical style influencing the artistic direction of Queen.
+                                As a member of Queen, Mercury was posthumously inducted into the Rock and Roll Hall of Fame in 2001, 
+                                the Songwriters Hall of Fame in 2003, and the UK Music Hall of Fame in 2004. 
+                                In 1990, he and the other Queen members were awarded the Brit Award for Outstanding Contribution to British Music</span>
+                                <button onclick=showMore() id="myBtn">Read more</button>
+                            </section>   
+                        </article>
+                        <!--Article on Brian May-->
+                        <article id="brian-left" class="tab-pane container">
+                            <h1>Brian May</h1>
+                            <section>
+                                Brian Harold May CBE (born 19 July 1947) is an English musician, singer, songwriter, record producer, and astrophysicist. 
+                                He is the lead guitarist of the rock band Queen.
+                                May was a co-founder of Queen with lead singer Freddie Mercury and drummer Roger Taylor, 
+                                having previously performed with Taylor in the band Smile, 
+                                which he had joined while he was at university. Within five years of 
+                                their formation in 1970 and the recruitment of bass player John Deacon completing the lineup, 
+                                Queen had become one of the biggest rock bands in the world with 
+                                the success of the album A Night at the Opera and its single "Bohemian Rhapsody". 
+                            </section>
+                        </article>
+                        <!--Article on Roger Taylor-->
+                        <article id="roger-left" class="tab-pane container">
+                            <h1>Roger Taylor</h1>
+                            <section>
+                                Roger Meddows Taylor OBE (born 26 July 1949) is an English musician, singer, songwriter, and multi-instrumentalist, 
+                                best known as the drummer for the rock band Queen.
+                                As a drummer, Taylor was recognized early in his career for his unique sound.
+                                He was voted by radio listeners as the eighth-greatest drummer in classic 
+                                rock music history in a poll conducted by Planet Rock in 2005.
+                                As a songwriter, Taylor contributed songs to Queen's albums from the beginning, 
+                                composing at least one track on every album, and often singing lead vocals on his own compositions. 
+                                He wrote or co-wrote three UK number ones ("These Are the Days of Our Lives",[4] "Innuendo" and "Under Pressure") 
+                                and contributed a further five major hits 
+                                ("Radio Ga Ga", "A Kind of Magic", "Heaven for Everyone", "Breakthru", and "The Invisible Man").
+                            </section>
+                        </article>
+                        <!--Article on John Deacon-->
+                        <article id="john-left" class="tab-pane container">
+                            <h1>John Deacon</h1>
+                            <section>
+                                John Richard Deacon (born 19 August 1951) is an English retired musician, 
+                                best known for being the bass guitarist for the rock band Queen. 
+                                He composed several songs for the group—including 
+                                Top 10 hits "You're My Best Friend", "Another One Bites the Dust", and 
+                                "I Want to Break Free"; co-wrote "Under Pressure", "Friends Will Be Friends" 
+                                and "One Vision"—and was involved in the band's financial management.
+                            </section>
+                        </article>
+                    </div>
+                </div>
+                <!--Carousel - documentation source = https://getbootstrap.com/docs/4.0/components/carousel/-->
+                <div class="col-md-6 text-center">
+                    <div id="myCarouselIndicators" class="carousel slide" data-ride="carousel">
+                        <!--Indicators at the bottom to show how many slides we have-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarouselIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarouselIndicators" data-slide-to="1"></li>
+                            <li data-target="#myCarouselIndicators" data-slide-to="2"></li>
+                            <li data-target="#myCarouselIndicators" data-slide-to="3"></li>
+                            <li data-target="#myCarouselIndicators" data-slide-to="4"></li>
+                        </ol>
+                        <!--The slides section and we declare the role as a listbox to tell the browser that it-->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <!--image source = https://www.pinterest.co.uk/pin/560487116117388430/-->
+                                <img class="carousel-image" src="../photos/queen_photos/band-cover.jpg" alt="First Slide - Band Cover">
+                                <div class="carousel-caption">
+                                <h5>Queen</h5>
+                                <p>Freddie Mercury, Brian May, Roger Taylor, John Deacon</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Image source = https://www.britannica.com/biography/Freddie-Mercury -->
+                            <img class="carousel-image" src="../photos/queen_photos/Freddie-Mercury.jpg" alt="Second Slide - Freddie Mercury">
+                            <div class="carousel-caption">
+                                <h5>Freddie Mercury</h5>
+                                <p>Lead Vocalist from 1970 to 1991</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Image source = https://www.pinterest.co.uk/pin/540220917799617335/ -->
+                            <img class="carousel-image" src="../photos/queen_photos/Brian-May.jpg" alt="Third Slide - Brian May">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Brian May</h5>
+                                <p>Vocalist since 1970</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--image source = https://www.pinterest.co.uk/pin/75576099984952124/ -->
+                            <img class="carousel-image" src="../photos/queen_photos/Roger-Taylor.jpg" alt="Fourth Slide - Roger Taylor">
+                            <div class="carousel-caption">
+                               <h5>Roger Taylor</h5>
+                               <p>Drummer since 1970</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--image source https://www.pinterest.co.uk/pin/283093526564606091/-->
+                            <img class="carousel-image" src="../photos/queen_photos/John-Deacon.jpg" alt="Fifth Slide - John Deacon">
+                            <div class="carousel-caption">
+                               <h5>John Deacon</h5>
+                               <p>Bass Guitar from 1970 to 1997</p>
+                            </div>
+                        </div>
+                     </div>
+                     <!--Carousel controls for next and previous-->
+                        <a class="carousel-controls-prev" href="#myCarouselIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-controls-next" href="#myCarouselIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>       
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer section-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>Bohemian Rhapsody</h4>
+                    <div class="Icon-Links">
+                        <a href="https://play.google.com/store/movies/details/Bohemian_Rhapsody?id=ekNucCcAarw&hl=en_SG">
+                            <!--Google Play - https://blog.google/products/google-play/ -->
+                            <img class="img-fluid" src="../photos/app-icons/play-store.png" alt="Google Play Store">
+                        </a>
+                        <a href="https://itunes.apple.com/us/movie/bohemian-rhapsody/id1438697738">
+                            <!--App Store - https://www.flaticon.com/free-icon/itunes_138406-->
+                            <img class="img-fluid" src="../photos/app-icons/app-store.png" alt="Apple Store">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Stream Music?</h4>
+                    <div class="Icon-Links">
+                        <a href="https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d">
+                            <!--Spotify - https://www.flaticon.com/free-icon/spotify_2111624-->
+                            <img class="img-fluid" src="../photos/app-icons/spotify.png" alt="Spotify">
+                        </a>
+                        <a href="https://music.apple.com/us/artist/queen/3296287">
+                            <!--Apple Music - https://www.apple.com/apple-music/-->
+                            <img class="img-fluid" src="../photos/app-icons/apple-music.png" alt="Apple Music">
+                        </a>
+                    </div>
+                </div>
+                <!--Twitter API sourced from here - https://publish.twitter.com/#-->
+                <div class="col-lg-4">
+                    <h4>Twitter</h4>
+                    <a class="twitter-timeline" data-width="500" data-height="500" data-theme="dark" href="https://twitter.com/QueenWillRock?ref_src=twsrc%5Etfw">Tweets by QueenWillRock</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                 
+                </div>
+            </div>
+            Made by Cameron Cottam &copy; 2020. All rights reserved to their owners.
+            CMP204 Unit 1 Assignment
+            <hr>
+            <a href="cookie_policy.html">Privacy Policy</a>
+        </div>
+    </footer>
+</body>
+</html>

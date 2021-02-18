@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Requirements page</title>
+	<link rel="stylesheet" href="reqStyle.css">
+</head>
+<body>
+
+<h1>CMP204 Requirements Page - Unit 1 Assessment</h1>
+
+<p>If you have not met a requirement, do not delete it from the table.</p>
+
+<table>
+  <tr>
+    <th class="reqCol">Requirement</th>
+    <th class="metCol">How did you meet this requirement?</th>
+    <th class="fileCol">File name(s), line no.</th>
+  </tr>
+
+  <tr>
+    <td>HTML, CSS, JavaScript has been contained within separate files</td>
+    <td>Yes, I have neatly separated my HTML, CSS, and JavaScript files into different folders and are linked in the head tag of every HTML document. 
+      As,well I have put the JavaScript files for plugins into folders to separate the different plugins
+    </td>
+
+    <td>his is can be found in the head tag of every HTML file, where I link the CSS and JavaScript files.</td>
+  </tr>
+
+  <tr>
+    <td>A clear use of HTML5</td>
+    <td>Yes, I have used tags where it has been appropriate, for example, I've used a footer tag to have a consistent footer, which includes links to my band’s music streaming sites. 
+      Such as Spotify and Apple Music. 
+      Furthermore, I have used the section tags to define specific areas on my pages with classes/id(s) to identify them.</td>
+    <td>This can be seen in every HTML document.</td>
+  </tr>
+  <tr>
+    <td>Use of the Bootstrap framework providing a responsive layout </td>
+    <td>Yes, I have used Bootstraps framework to provide a responsive layout, such as using 'img-fluid', the column/grid system that Bootstrap provides for a simplified layout.
+      A good example of my application using the framework was using the carousel feature that Bootstrap 4 provides. (the documentation for that can be found 
+      <a href="https://getbootstrap.com/docs/4.0/components/carousel/">HERE</a>.
+
+     I also used the nav-tabs class to display different information depending on which the tab is selected. 
+     For example, information on the band summary, they click Queen and for each member, they select their name. 
+     It is also suitable when the browser window is resized that it will respond to the size difference.
+      <br>
+      <br>
+      <b>Carousel & Side Tabs - about_us.html(in main-pages folder)
+      custom.css(located in my_css_and_js folder, which can be found in the css_and_js folder)</b>
+    </td>
+    <td>about_us.html lines:59-227
+        <br>
+        custom.css lines:150-165    
+    </td>
+  </tr>
+  <tr>
+    <td>Use of JavaScript to manipulate the DOM based on an event</td>
+    <td>Yes, I created a JavaScript function called ShowMore and is used in the about_us.html file and uses the onclick event to show/hide text.
+        The purpose of it is to hide a large part of a summary in Freddie Mercury's bio.
+      <br>
+      The function works by replacing half the text with an ellipsis and when the user clicks the button it reveals the rest of the text. The JavaScript function replaces the display style of the id ‘#More’(which hides the text) to display inline, which reveals the text. 
+      It targets the span id and button ids to confirm that the button has been and changes the text on the button to read more or read less.
+      <br>
+      <br>
+      <b>assignment.js located in my_css_and_js folder which is found in the css_and_js</b>
+    </td>
+    <td>assignment.js lines:55-71, about_us.html lines:107-113, custom.css lines:145-148  </td>
+  </tr>
+  <tr>
+    <td>JavaScript loading of dynamically changing information</td>
+    <td>Yes, I created a countdown timer, which is dynamically changing by counting down to a date & time that I have declared in the JavaScript function. 
+      I originally had it, where you declare the time in a div tag and pass the divs contents to the function through innerHTML.
+      I realise this could cause issues if an attacker or a user decides to mess with that div tag.
+      <br>
+       The purpose of the countdown is to countdown to upcoming clothes and the countdown dynamically changes when it zeros. It replaces the countdown elements with size options and a purchase to buy button.
+      <br>
+      <b>merch_html can be found in main-pages folder</b>
+    </td>
+    <td>assignment.js lines:15-52, merch.html lines:85-103, custom.css lines:265-292</td>
+  </tr>
+
+  <tr>
+    <td>Use of jQuery in conjunction with the DOM</td>
+    <td>Yes, I used jQuery to insert an image into my navigation to act both as an image brand for my navbar, which is displayed on every page and as a responsive nav-item that sends the user back to the index page.
+        I achieved this by creating an empty div with an id called ‘navbar-brand’, then I used Jquery to target the image I want and use the getElementByID to find navbar-brand and append the image.
+        <br>
+        The other example of using jQuery in conjunction with the DOM is using the hover feature in Jquery to change the background colour of items in my navigation bar.
+        When the user is no longer hovering it changes back.
+        <br>
+        The HTML lines are demonstrated in all files, so I will show the lines in the index.html
+    </td>
+    <td>1.Appending an image to the navbar: assignment.js lines:111-116, custom.css lines:32-35, index.html lines:41.
+        <br>
+        2.Background colour change: assignment.js lines:86-96, index.html lines:47-62, custom.css lines:41    
+    </td>
+  </tr>
+  <tr>
+    <td>Use of a jQuery plugin to enhance your application</td>
+    <td>Yes, I used two plugins, one was a cookie-popup plugin, which, asks the users, if they would like to accept cookies and has custom options for what kind of cookies.
+      It is displayed in the index.html and I created a function to call to the cookie-popup function in the author’s JavaScript file, as well, I used his CSS file for customizing the popup.
+      The plugin can be found <a href="https://www.jqueryscript.net/other/GDPR-Cookie-Consent-Popup-Plugin.html">HERE</a>. The plugin files can be found in the cookie folder.     
+      <br>
+      The second plugin is a rating system, where a user can rate an album from 1 to 5 stars, as of now, the stars reset after the user leaves that album page. 
+      I believe this is a good option because it could make the user rethink about their previous rating. But this can be expanded, during the server-side part later, i.e finding the average number of stars from multiple users for example.
+      The plugin can be found <a href="https://www.jqueryscript.net/other/rating-star-icons.html">HERE</a>. 
+      The plugin files can be found in the folder called star_rating in the CSS and JS folder.
+    </td>
+    <td>Cookie popup:assignment.js lines:119-152, JavaScript and CSS for the popup are in the cookie folder, which were done by the author.
+        <br>
+        Star Rating: assignment.js lines:3-12, hot_space.html lines:82, the files for the plugin are in the star_rating folder.
+    </td>
+  </tr>
+  <tr>
+    <td>Appropriate consideration of relevant laws</td>
+    <td>Yes, I considered copyright laws and the 'cookie law', When the user first connects to the site, a cookie-popup is displayed asking the user to accept cookies, 
+      but there are other options available to the user.
+      Such as, being able to customize what cookies the user can accept. 
+      Which are site preferences, Analytics, Marketing and essentials(this is checked automatically). 
+      Once the user has accepted the cookies it then stores them cookies in the browser and expires after 30 days or if the client deletes them from their browser. If the site preferences checkbox is ticked, the console displays a message to acknowledge that it’s worked. 
+      This is done via the cookie popup plugin, which provides the creation of cookies (which can be found <a href="https://www.jqueryscript.net/other/GDPR-Cookie-Consent-Popup-Plugin.html">HERE</a>).
+      Lastly, if the user wanted to find more information on the privacy policy site, there is a button called more information that directs the user to the cookie_policy.html page as well there is a link to the cookie_policy page in the footer of every page.
+            <br>
+            <br>
+      For copyright, I placed in the footer an acknowledgement for the uses of images and to the respective owners of those pictures and likeness. This is on every page.
+    </td>
+    <td>Cookie popup:assignment.js lines:119-152, JavaScript and CSS for the popup are in the cookie folder, which were done by the author.
+      <br>
+      Copyright: index.html lines:129-132
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
